@@ -4,8 +4,6 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 
-RSpec.configure do |config|
-  config.include Capybara::DSL
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -43,4 +41,4 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 end
-end
+
