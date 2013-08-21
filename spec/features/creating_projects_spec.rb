@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'capybara/rspec'
 
 feature 'Creating Projects' do 
 	scenario "can create a project" do
@@ -12,4 +13,6 @@ feature 'Creating Projects' do
 
 		expect(page).to have_content('Project has been created.') 
 	end
+
+
 end
