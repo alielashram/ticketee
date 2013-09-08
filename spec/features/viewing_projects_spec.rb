@@ -1,4 +1,5 @@
 require 'spec_helper'
+
 feature "Viewing projects" do 
 	scenario "Listing all projects" do
 	project = FactoryGirl.create(:project, name: "TextMate 2") 
