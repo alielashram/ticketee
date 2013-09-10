@@ -17,8 +17,8 @@ scenario "can create a project" do
 
   expect(page.current_url).to eql(project_url(project))
 
-  #title = "TextMate 2 - Projects - Ticketee"
-  #expect(find("title").native.text).to have_content(title) 
+  title = "TextMate 2 - Projects - Ticketee"
+  expect(find("title").native.text).to have_content(title) 
 end
 scenario "can not create a project without a name" do 
   click_button 'Create Project'
