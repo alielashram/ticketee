@@ -9,6 +9,21 @@ class TicketsController < ApplicationController
 	def show 
 	end
 
+	def edit 
+	end
+
+	def update
+		if @ticket.update(ticket_params) 
+			flash[:notice] = "Ticket has been updated."
+
+			redirect_to [@project, @ticket] 
+		else
+			flash[:alert] = "Ticket has not been updated."
+
+			render action: "edit"
+	end
+end 
+
 	def set_ticket 
 			@ticket = @project.tickets.find(params[:id])
 	end
@@ -21,8 +36,8 @@ class TicketsController < ApplicationController
 			else
 					flash[:alert] = "Ticket has not been created."
 					render :action => "new" 
-	end
-		end 
+		end
+	end 
 
 		private
 				def ticket_params 
